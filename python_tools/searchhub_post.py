@@ -5,7 +5,7 @@ import urllib
 import urllib2
 import cookielib
 
-def searchhub_post(post_url, params):
+def post(post_url, params):
     '''模拟向searchhub发送post请示
 
     test_post()中为一个发送推荐请求的测试例子
@@ -29,7 +29,7 @@ def test_post():
             "queryType":"recommendquery", "parity":"1358820965005213_scenerecognitionquery_recommendquery", "start":0, "end":4,
             "queryFrom":"shoppingext", "sceneType":"detail"}
 
-    print searchhub_post(post_url, params).encode('gb18030')
+    print post(post_url, params).encode('gb18030')
 
 if __name__ == '__main__':
 
