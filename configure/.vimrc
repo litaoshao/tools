@@ -1,30 +1,28 @@
+filetype off
 filetype plugin indent on
-autocmd FileType python setlocal et sta sw=4 sts=4
 
-set autoindent " same level indent
-set smartindent " next level indent
-set expandtab
-set tabstop=4 "ÉèÖÃtab¼üÎª4¸ö¿Õ¸ñ
-set shiftwidth=4
-set softtabstop=4
-set backspace=indent,eol,start
-set hlsearch "´ò¿ª¸ßÁÁËÑË÷
+" don't bother with vi compatibility
+set nocompatible
 
-"set fenc=GB18030 "Éè¶¨Ä¬ÈÏ½âÂë 
-"set fencs=utf-8,usc-bom,euc-jp,gb18030,gbk,gb2312,cp936 
-set nocp "»òÕß set nocompatible ÓÃÓÚ¹Ø±ÕVIµÄ¼æÈİÄ£Ê½ 
-set number "ÏÔÊ¾ĞĞºÅ 
-set ai "»òÕß set autoindent vimÊ¹ÓÃ×Ô¶¯¶ÔÆë£¬Ò²¾ÍÊÇ°Ñµ±Ç°ĞĞµÄ¶ÔÆë¸ñÊ½Ó¦ÓÃµ½ÏÂÒ»ĞĞ 
-set si "»òÕß set smartindent ÒÀ¾İÉÏÃæµÄ¶ÔÆë¸ñÊ½£¬ÖÇÄÜµÄÑ¡Ôñ¶ÔÆë·½Ê½
-set sw=4 "»òÕß set shiftwidth ÉèÖÃµ±ĞĞÖ®¼ä½»´íÊ±Ê¹ÓÃ4¸ö¿Õ¸ñ
-set ruler "ÉèÖÃÔÚ±à¼­¹ı³ÌÖĞ,ÓÚÓÒÏÂ½ÇÏÔÊ¾¹â±êÎ»ÖÃµÄ×´Ì¬ĞĞ 
-set incsearch "ÉèÖÃÔöÁ¿ËÑË÷,ÕâÑùµÄ²éÑ¯±È½Ïsmart 
-set showmatch "¸ßÁÁÏÔÊ¾Æ¥ÅäµÄÀ¨ºÅ 
-set matchtime=5 "Æ¥ÅäÀ¨ºÅ¸ßÁÁÊ±¼ä(µ¥Î»Îª 1/10 s) set ignorecase "ÔÚËÑË÷µÄÊ±ºòºöÂÔ´óĞ¡Ğ´ 
-syntax on "¸ßÁÁÓï·¨
+" enable syntax highlighting
+syntax enable
 
-
-let Tlist_Show_One_File=1                                                                                                                 
-let Tlist_Exit_OnlyWindow=1                                                                                                                                                  
-let g:winManagerWindowLayout='FileExplorer|TagList'                                                                                                                         
-nmap wm :WMToggle<cr> 
+set autoindent
+set autoread                                                 " reload files when changed on disk, i.e. via `git checkout`
+set backupcopy=yes                                           " see :help crontab
+set clipboard=unnamed                                        " yank and paste with the system clipboard
+set encoding=utf-8
+set expandtab                                                " expand tabs to spaces
+set ignorecase                                               " case-insensitive search
+set incsearch                                                " search as you type
+set laststatus=2                                             " always show statusline
+set list                                                     " show trailing whitespace
+set listchars=tab:¿\ ,trail:¿
+set number                                                   " show line numbers
+set ruler                                                    " show where you are
+set scrolloff=3                                              " show context above/below cursorline
+set shiftwidth=4                                             " normal mode indentation commands use 2 spaces
+set showcmd
+set smartcase                                                " case-sensitive search if any caps
+set softtabstop=4                                            " insert mode tab and backspace use 2 spaces
+set tabstop=4                                                " actual tabs occupy 8 characters
